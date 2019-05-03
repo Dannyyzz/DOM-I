@@ -43,17 +43,22 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //nav 
-
-
 let nav = document.querySelector('nav').children;
+
 for (i = 0; i < nav.length; i++){
   nav[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
   nav[i].style.color = 'purple';
   nav[i].style.fontWeight = '900';
  };
 
-// let navList = document.querySelector('.nav');
-
+ let nav1 = document.createElement('a');
+ let nav2 = document.createElement('a');
+ let nav1info = document.createTextNode('Donate');
+ let nav2info = document.createTextNode('Demo');
+ nav1.appendChild(nav1info);
+ nav2.prepend(nav2info);
+ document.querySelector('nav').appendChild(nav1);
+ document.querySelector('nav').prepend(nav2);
 
 //cta
 let ctaHeader = document.querySelector('.cta-text h1');
