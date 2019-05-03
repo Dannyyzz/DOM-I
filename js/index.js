@@ -43,10 +43,17 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //nav 
+
+
 let nav = document.querySelector('nav').children;
 for (i = 0; i < nav.length; i++){
   nav[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
-}
+  nav[i].style.color = 'purple';
+  nav[i].style.fontWeight = '900';
+ };
+
+// let navList = document.querySelector('.nav');
+
 
 //cta
 let ctaHeader = document.querySelector('.cta-text h1');
